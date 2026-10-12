@@ -1,0 +1,1632 @@
+/* Public styling for Gotham Showclix */
+
+.gotham-events-list {
+    margin: 20px 0;
+}
+
+.gotham-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gotham-event-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.gotham-event-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.gotham-event-no-image {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-weight: bold;
+}
+
+.gotham-event-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gotham-event-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.gotham-event-date,
+.gotham-event-venue {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.gotham-event-actions {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.gotham-event-btn,
+.gotham-btn {
+    display: inline-block;
+    background: #0073aa;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.gotham-event-btn:hover,
+.gotham-btn:hover {
+    background: #005177;
+    color: #fff;
+}
+
+/* Single Event Page */
+.gotham-single-event-container {
+    padding: 40px 0;
+}
+
+.gotham-event-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.gotham-event-sidebar {
+    width: 35%;
+}
+
+.gotham-event-main-content {
+    width: 65%;
+}
+
+.gotham-event-main-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.gotham-event-meta-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+}
+
+.gotham-tickets-list {
+    margin-top: 20px;
+}
+
+.gotham-ticket-tier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.gotham-ticket-info h3 {
+    margin: 0 0 5px 0;
+}
+
+.gotham-ticket-desc {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.gotham-ticket-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gotham-ticket-price {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.btn-sold-out {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* ───── NEW GOTHAM CALENDAR STYLES (GSC) ────────── */
+.gotham-calendar {
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: archivo, sans-serif;
+}
+
+.gotham-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    color: #1a1a1a;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.gotham-calendar-header h2 {
+    font-family: archivo, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.gotham-cal-btn {
+    background: #a40328;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.gotham-cal-btn:hover {
+    background: #8a0221;
+}
+
+.gotham-calendar-grid-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #a40328;
+    color: #fff;
+    text-align: center;
+}
+
+.gotham-cal-day-name {
+    padding: 14px 0;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.gotham-cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-left: 1px solid #ddd;
+}
+
+.gotham-cal-day {
+    min-height: 160px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    margin-top: 18px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    background: #fff;
+}
+
+.gotham-cal-date-num {
+    display: block;
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.gotham-cal-empty {
+    background: #f9f9f9;
+}
+
+.gotham-cal-today {
+    background: #F5E8D3;
+    /* Beige highlight */
+    border: 2px solid #a40328;
+}
+
+/* Event Cards inside Calendar Cells */
+.gsc-cal-event-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eaeaea;
+}
+
+.gsc-cal-event-img {
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-color: #eee;
+}
+
+.gsc-cal-event-info {
+    padding: 8px;
+    text-align: center;
+}
+
+.gsc-cal-event-title {
+    display: block;
+    font-family: archivo, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.gsc-cal-event-title:hover {
+    color: #a40328;
+}
+
+.gsc-cal-event-time {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.gsc-cal-event-btn {
+    display: inline-block;
+    background: #a40328;
+    color: #fff !important;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.gsc-cal-event-btn:hover {
+    background: #8a0221;
+}
+
+table.fc-scrollgrid tr td {
+    padding: 0;
+}
+
+table.fc-scrollgrid thead th,
+table.fc-scrollgrid tr th {
+    padding: 0 !important;
+}
+
+.entry-content table:not(.variations) {
+    margin: 0 !important;
+}
+
+.fc-col-header .fc-scrollgrid-sync-inner {
+    padding: 5px 0 !important;
+}
+
+/* ───── CUSTOM CALENDAR CONTROLS ───────────────────── */
+.custom_event_data {
+    font-family: 'Archivo', archivo, sans-serif;
+}
+
+.custom_top_filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.events-search {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid #a40328;
+    overflow: hidden;
+    flex: 1;
+    max-width: 400px;
+}
+
+.events-search input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: #fff;
+    color: #1a1a1a;
+    min-width: 0;
+}
+
+.events-search button#gotham-search-btn {
+    background: #a40328;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+}
+
+.events-search button#gotham-search-btn:hover {
+    background: #8a0221;
+}
+
+.custom_drop_down_filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.events-dropdown-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border: 2px solid #a40328;
+    border-radius: 0px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    user-select: none;
+    transition: border-color 0.2s;
+}
+
+.events-dropdown-button:hover {
+    border-color: #a40328;
+}
+
+.events-dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    top: calc(100% + 4px);
+    left: 0;
+}
+
+.events-dropwdown-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+}
+
+.events-dropwdown-option:hover {
+    background: #f5f5f5;
+    color: #a40328;
+}
+
+.events-clear-filters button#gotham-clear-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 0px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #555;
+    font-family: inherit;
+    /*     transition: border-color 0.2s, color 0.2s; */
+    white-space: nowrap;
+}
+
+/* .events-clear-filters button#gotham-clear-btn:hover {
+    border-color: #a40328;
+    color: #a40328;
+} */
+
+/* Custom navigation row */
+.second_nav_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin-bottom: 8px;
+}
+
+button.events-nav-arrow {
+    background: #a40328;
+    border: none;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+    box-sizing: content-box;
+    padding: 0px;
+}
+
+button.events-nav-arrow:hover {
+    background: #8a0221;
+}
+
+#gotham-month-label {
+    font-family: 'Archivo', archivo, serif;
+    font-size: 2.8125rem ;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    flex: 1;
+}
+
+/* Filter icon placeholders */
+.events-filter-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+/* Responsive custom controls */
+@media (max-width: 768px) {
+	.gsc-schedule-row {
+		gap: 5px;
+		padding-bottom: 40px !important;
+	}
+	
+	button.events-nav-arrow {
+		width: 25px;
+		height: 25px;
+		font-size: 1rem;
+		padding: 0px;
+	}
+	
+	.fc-col-header-cell{
+		font-size:12px !important;
+	}
+	
+    .fc .fc-daygrid-day-frame {
+        min-height: unset !important;
+        padding: 10px;
+    }
+	
+	.fc .fc-daygrid-day-top{
+		justify-content: center !important;
+	}
+	
+	.fc .gsc-day-has-events .fc-scrollgrid-sync-inner {
+		background: #78c2ed;
+	}
+	
+	.fc .fc-daygrid-day-number{
+		background-color: #01548c00 !important;
+		color:#000 !important;
+		font-size:12px !important
+	}
+	
+	.fc .fc-daygrid-body-natural .fc-daygrid-day-events{
+		display:none;
+	}
+
+    .custom_top_filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .events-search {
+        max-width: 100%;
+    }
+
+    .custom_drop_down_filters {
+        justify-content: space-between;
+		flex-direction: column;
+    }
+	
+	.custom_drop_down_filters > div {
+		width: 100%;
+	}
+	
+	.gsc-schedule-title {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+	
+	.gsc-schedule-time-col {
+		margin-bottom: 15px;
+	}
+
+    #gotham-month-label {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .gotham-calendar-grid-header {
+        display: none;
+    }
+
+    .gotham-cal-days {
+        display: block;
+        border-left: none;
+    }
+
+    .gotham-cal-day {
+        min-height: auto;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    .gotham-cal-date-num {
+        text-align: left;
+        font-size: 1.4rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    .gsc-cal-event-card {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .gsc-cal-event-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gsc-cal-event-info {
+        flex: 1;
+        text-align: left;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gsc-cal-event-title {
+        font-size: 1rem;
+    }
+}
+
+
+/* ───── NEW GOTHAM SCHEDULE LIST STYLES ────────── */
+.gsc-schedule-list {
+    max-width: 1100px;
+    margin: 40px auto;
+    font-family: archivo, sans-serif;
+}
+
+.gsc-schedule-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.gsc-schedule-row:last-child {
+    border-bottom: none;
+}
+
+/* Date Column */
+.gsc-schedule-date-col {
+    flex: 0 0 180px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.gsc-schedule-date-col .day {
+    font-size: 40px;
+    color: #000;
+}
+
+.gsc-schedule-date-col .month-year div {
+    font-size: 18px;
+    color: #000;
+}
+
+.gsc-schedule-dow {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+
+/* Time Column */
+
+.gsc-schedule-time-col {
+    flex: 1;
+}
+
+.gsc-schedule-time-col .gsc-schedule-time {
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #000;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* Info Column */
+.gsc-schedule-info-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gsc-schedule-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f5f5f5;
+}
+
+.gsc-schedule-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gsc-schedule-details {
+    flex: 1;
+}
+
+.gsc-schedule-title {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.gsc-schedule-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.gsc-schedule-title a:hover {
+    color: #a40328;
+}
+
+.gsc-schedule-time {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Action Column */
+.gsc-schedule-action-col {
+    flex: 0 0 auto;
+    text-align: right;
+}
+
+/* .gsc-schedule-btn {
+    display: inline-block;
+    background: #a40328;
+    color: #fff !important;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+} */
+
+.gsc-schedule-btn {
+    height: 48px;
+    box-shadow: inset 0 0 0 2px #000, 2px 2px 0 0 #000 !important;
+    color: var(--dark);
+    text-align: center;
+    background-color: #fcfaf4;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: box-shadow .2s, transform .2s;
+}
+
+.gsc-schedule-btn:hover{
+    box-shadow: inset 0 0 0 2px #000, 3px 3px 0 0  #000 !important;
+    text-decoration: none;
+    transform: translate(-1px, -1px);
+}
+
+/* 
+.gsc-schedule-btn:hover {
+    background: #8a0221;
+} */
+
+/* Responsive Schedule */
+@media (max-width: 768px) {
+    .gsc-schedule-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .gsc-schedule-date-col {
+        flex: none;
+        width: 100%;
+    }
+
+    .gsc-schedule-info-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gsc-schedule-action-col {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ───── NEW GOTHAM SINGLE EVENT STYLES (GSC) ────────── */
+
+.gsc-event-page {
+    /* Background removed per request */
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+    font-family: 'archivo', serif;
+}
+
+.gsc-event-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.gsc-event-image-col {
+    flex: 0 0 380px;
+}
+
+.gsc-event-image-col img {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+}
+
+.gsc-event-image-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.gsc-event-info-col {
+    flex: 1;
+    min-width: 0;
+}
+
+.gsc-event-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 18px;
+    line-height: 1.25;
+}
+
+.gsc-event-meta {
+    margin-bottom: 20px;
+}
+
+.gsc-event-meta p {
+    margin: 6px 0;
+    font-size: 1rem;
+    color: #333;
+    font-family: archivo, sans-serif;
+}
+
+.gsc-event-meta strong {
+    color: #1a1a1a;
+}
+
+.gsc-event-description {
+    font-family: archivo, sans-serif;
+    font-size: 0.97rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.gsc-get-tickets-btn {
+    display: inline-block;
+    background: #a40328;
+    color: #fff !important;
+    font-family: archivo, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 17px 28px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+    width: 209px;
+    margin: 0 45px;
+}
+
+.gsc-get-tickets-btn:hover {
+    background: #8a0221;
+}
+
+.gsc-no-tickets {
+    font-family: archivo, sans-serif;
+    color: #888;
+    font-style: italic;
+}
+
+/* ── MODAL ─────────────────────────────────────────── */
+.gsc-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.82);
+    z-index: 999999;
+    align-items: center;
+    justify-content: center;
+}
+
+.gsc-modal-overlay.open {
+    display: flex;
+}
+
+.gsc-modal-box {
+    position: relative;
+    width: 92%;
+    max-width: 860px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.gsc-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.gsc-modal-header strong {
+    font-family: archivo, sans-serif;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+}
+
+.gsc-modal-close {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.gsc-modal-body {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+    min-height: 500px;
+}
+
+#gsc-ticket-embed-container {
+    width: 100%;
+    position: relative;
+}
+
+#gsc-ticket-embed-container>* {
+    max-width: 100% !important;
+}
+
+#gsc-ticket-embed-container iframe {
+    width: fit-content !important;
+    border: 0;
+    display: block;
+}
+
+/* ── UPCOMING EVENTS ────────────────────────────────── */
+.gsc-upcoming-section {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding: 0 0 40px;
+}
+
+.gsc-upcoming-section h2 {
+    font-family: archivo, serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gsc-upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gsc-event-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gsc-event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+}
+
+.gsc-card-image-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 66%;
+    overflow: hidden;
+}
+
+.gsc-card-image-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gsc-card-no-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.gsc-date-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #fff;
+    border-radius: 6px;
+    text-align: center;
+    padding: 6px 10px;
+    min-width: 48px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    line-height: 1.1;
+}
+
+.gsc-date-badge .month {
+    font-family: archivo, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a40328;
+}
+
+.gsc-date-badge .day {
+    font-family: archivo, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.gsc-date-badge .dow {
+    font-family: archivo, sans-serif;
+    font-size: 0.6rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.gsc-card-body {
+    padding: 14px 14px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gsc-card-title {
+    font-family: archivo, serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+
+.gsc-card-datetime {
+    font-family: archivo, sans-serif;
+    font-size: 0.78rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.gsc-card-btn {
+    display: inline-block;
+    background: #a40328;
+    color: #fff !important;
+    font-family: archivo, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: auto;
+    transition: background 0.2s;
+}
+
+.gsc-card-btn:hover {
+    background: #8a0221;
+}
+
+/* ── RESPONSIVE (GSC) ───────────────────────────────── */
+@media (max-width: 900px) {
+    .gsc-event-wrap {
+        flex-direction: column;
+    }
+
+    .gsc-event-image-col {
+        flex: none;
+        width: 100%;
+    }
+
+    .gsc-upcoming-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {}
+
+/* ───── FULLCALENDAR GSC STYLES ───────────────────── */
+.gsc-fc-event-link {
+    text-decoration: none !important;
+    display: block;
+    cursor: pointer;
+}
+
+a.fc-event {
+    border: 0;
+}
+
+.gsc-fc-event {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px 0;
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.fc .fc-daygrid-body-natural .fc-daygrid-day-events{
+	margin-bottom:0px;
+}
+
+.fc .fc-day-other .gsc-fc-event {
+    background: #cfcfce;
+}
+
+.fc-event-main {
+    padding: 0 !important;
+}
+
+.gsc-fc-img {
+    height: 50px;
+	width: 50px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.gsc-fc-info {
+    padding: 6px;
+    text-align: center;
+}
+
+.gsc-fc-title {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 0px;
+    white-space: normal;
+}
+
+.gsc-fc-time {
+    font-size: 0.7rem;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+.gsc-fc-btn {
+    display: inline-block;
+    background: #a40328;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.fc .fc-daygrid-day-frame {
+    min-height: 200px;
+    position: relative;
+	background: #fff;
+}
+
+.fc-day-other, .fc-day-other .fc-daygrid-day-frame {
+    background: #cdcdcdc7 ;
+}
+
+.fc .fc-day-other .fc-daygrid-day-top {
+    opacity: 1 !important;
+}
+
+
+.fc .fc-daygrid-day-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.fc .fc-daygrid-day-number {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: #F2EACC;
+    color: #111; 
+    padding: 0 !important;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: #faf5e5 !important;
+    border: 3px solid #a40328 !important;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border: 1px solid #ddd !important;
+}
+
+.fc-col-header-cell {
+    background: #a40328;
+    color: #fff;
+    padding: 10px 0 !important;
+    text-transform: unset;
+	font-weight: 400 !important;
+}
+
+.fc-col-header-cell-cushion {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.fc-toolbar-title {
+    font-family: Archivo, serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+}
+
+.fc-button-primary {
+    background-color: #a40328 !important;
+    border-color: #a40328 !important;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+}
+
+.fc-button-primary:hover {
+    background-color: #8a0221 !important;
+    border-color: #8a0221 !important;
+}
+
+/* ── SPIN ANIMATION ──────────────────────────────────── */
+@keyframes gsc-spin-anim {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gsc-spin {
+    animation: gsc-spin-anim 1s linear infinite;
+}
+
+/* ── STYLE LEAP BUTTON INJECTION TO MATCH RED BUTTON ── */
+#gsc-ticket-embed-container .button--primary,
+#gsc-ticket-embed-container .banner__cta,
+#gsc-ticket-embed-container button[data-testid="get-tickets"] {
+    background-color: #a40328 !important;
+    background: #a40328 !important;
+    color: #fff !important;
+    font-family: archivo, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    padding: 14px 36px !important;
+    border-radius: 6px !important;
+    border: none !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px !important;
+    cursor: pointer !important;
+    transition: background 0.2s !important;
+}
+
+#gsc-ticket-embed-container .button--primary:hover,
+#gsc-ticket-embed-container .banner__cta:hover,
+#gsc-ticket-embed-container button[data-testid="get-tickets"]:hover {
+    background-color: #8a0221 !important;
+    background: #8a0221 !important;
+}
+
+/* ───── CUSTOM LIST VIEW STYLES ───────────────────── */
+#gotham-custom-list-view {
+    max-width: 1200px;
+    margin: 20px auto 40px;
+    font-family: archivo, sans-serif;
+}
+
+.gsc-list-day-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 24px 30px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.gsc-list-day-header {
+    width: 140px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.gsc-list-day-name {
+    font-family: Archivo, serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.gsc-list-date-label {
+    font-family: archivo, sans-serif;
+    font-size: 0.9rem;
+    color: #a40328;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.gsc-list-day-events {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gsc-list-event-row {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    gap: 20px;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+}
+
+.gsc-list-day-container .gsc-list-event-row {
+    border-bottom: 0px solid #eaeaea;
+}
+
+.gsc-list-day-events .gsc-list-event-row:first-child {
+    padding-top: 0;
+}
+
+.gsc-list-day-events .gsc-list-event-row:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.gsc-list-event-img-col {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+
+.gsc-list-event-img-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.gsc-list-event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gsc-list-event-no-img {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    border-radius: 4px;
+}
+
+.gsc-list-event-title-col {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-right: 15px;
+}
+
+.gsc-list-event-title-link {
+    font-family: Archivo, serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #000;
+    text-decoration: none !important;
+    line-height: 1.3;
+    transition: color 0.2s;
+}
+
+.gsc-list-event-title-link:hover {
+    color: #a40328;
+}
+
+.gsc-list-event-time-col {
+    flex-shrink: 0;
+    text-align: right;
+    min-width: 90px;
+    margin-right: 15px;
+}
+
+.gsc-list-event-time {
+    font-family: archivo, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.gsc-list-event-btn-col {
+    flex-shrink: 0;
+}
+
+.gsc-list-event-btn {
+    display: inline-block;
+    background-color: #a40328;
+    color: #ffffff !important;
+    font-family: archivo, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(164, 3, 40, 0.2);
+}
+
+.gsc-list-event-btn:hover {
+    background-color: #8a0221;
+}
+
+.gsc-no-events {
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+    font-family: archivo, serif;
+    font-size: 1.25rem;
+    color: #666;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ───── RESPONSIVE LIST VIEW ──────────────────────── */
+@media (max-width: 768px) {
+    .gsc-list-day-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .gsc-list-day-header {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .gsc-list-day-name {
+        margin-bottom: 0;
+        font-size: 1.15rem;
+    }
+
+    .gsc-list-date-label {
+        font-size: 0.85rem;
+    }
+
+    .gsc-list-event-row {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .gsc-list-event-img-col {
+        width: 60px;
+        height: 60px;
+    }
+
+    .gsc-list-event-title-col {
+        width: calc(100% - 72px);
+        flex-grow: 0;
+        padding-right: 0;
+    }
+
+    .gsc-list-event-time-col {
+        width: calc(50% - 6px);
+        text-align: left;
+        margin-right: 0;
+        min-width: unset;
+    }
+
+    .gsc-list-event-btn-col {
+        width: calc(50% - 6px);
+        text-align: right;
+    }
+
+    .gsc-list-event-btn {
+        width: 100%;
+        max-width: 140px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+
+    /* Mobile Calendar highlights for days with events */
+    .fc .fc-daygrid-day.gsc-day-has-events {
+        background-color: #85cbf9 !important;
+    }
+
+    .fc .fc-daygrid-day.fc-day-today.gsc-day-has-events {
+        background-color: #85cbf9 !important;
+        border: 3px solid #a40328 !important;
+    }
+
+    /* Hide default FullCalendar event elements inside grid cells on mobile to keep cells clean */
+    .fc .fc-daygrid-day-frame .fc-daygrid-event-harness,
+    .fc .fc-daygrid-day-frame .fc-event {
+        display: none !important;
+    }
+
+    .fc-daygrid-day {
+        cursor: pointer;
+    }
+}
+
+/* ───── DROPDOWN AND CLEAR FILTERS ICONS ────────── */
+.events-filter-icon {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.events-filter-icon.calendar {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777777'><rect x='2' y='2' width='9' height='9'/><rect x='13' y='2' width='9' height='9'/><rect x='2' y='13' width='9' height='9'/><rect x='13' y='13' width='9' height='9'/></svg>");
+}
+
+.events-filter-icon.list {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777777'><rect x='2' y='4' width='20' height='3'/><rect x='2' y='11' width='20' height='3'/><rect x='2' y='18' width='20' height='3'/></svg>");
+}
+
+.events-filter-icon.day {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777777'><rect x='2' y='2' width='20' height='20'/></svg>");
+}
+
+.events-clear-filters-icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23777777' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15'/></svg>");
+}
