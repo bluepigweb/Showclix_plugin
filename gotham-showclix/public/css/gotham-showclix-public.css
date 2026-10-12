@@ -993,7 +993,7 @@ button.events-nav-arrow:hover {
 }
 
 #gsc-ticket-embed-container iframe {
-    width: fit-content !important;
+    width: 100% !important;
     border: 0;
     display: block;
 }

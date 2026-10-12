@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:       Gotham Showclix
  * Description:       Sync and display Leap Events natively via custom DB structures, dynamic shortcodes, and calendars.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Jero
  * Text Domain:       gotham-showclix
  * Domain Path:       /languages
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  */
-define( 'GOTHAM_SHOWCLIX_VERSION', '1.0.0' );
+define( 'GOTHAM_SHOWCLIX_VERSION', '1.0.1' );
 
 /**
  * The code that runs during plugin activation.

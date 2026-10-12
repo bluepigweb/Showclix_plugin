@@ -382,24 +382,52 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         container.appendChild(embedScript);
 
+        // The embed's own auto-resizer can leave the iframe at 0px tall on newer
+        // WebKit (iOS / Safari), hiding the widget. Keep a min-height matching the
+        // iframe content so the widget is always visible, whatever the resizer does.
+        function syncIframeHeight(iframe, iframeDoc) {
+            var contentHeight = Math.max(
+                iframeDoc.documentElement ? iframeDoc.documentElement.scrollHeight : 0,
+                iframeDoc.body ? iframeDoc.body.scrollHeight : 0
+            );
+            if (contentHeight > 1) {
+                iframe.style.minHeight = contentHeight + 'px';
+            }
+            return iframe.getBoundingClientRect().height > 1;
+        }
+
         var checkLoader = setInterval(function () {
             var iframe = container.querySelector('iframe');
-            if (iframe && iframe.contentDocument) {
-                var iframeDoc = iframe.contentDocument;
-                var htmlTag = iframeDoc.documentElement;
+            var iframeDoc;
+            try {
+                iframeDoc = iframe ? iframe.contentDocument : null;
+            } catch (e) {
+                iframeDoc = null;
+            }
+            if (!iframeDoc) return;
 
-                if (htmlTag) {
-                    htmlTag.style.setProperty('--BUTTON__background-color', '#a40328');
-                    htmlTag.style.setProperty('--GLOBAL__COLOR__PRIMARY', '#a40328');
-                    htmlTag.style.setProperty('--GLOBAL__COLOR__ACCENT', '#a40328');
-                }
+            var htmlTag = iframeDoc.documentElement;
+            if (htmlTag) {
+                htmlTag.style.setProperty('--BUTTON__background-color', '#a40328');
+                htmlTag.style.setProperty('--GLOBAL__COLOR__PRIMARY', '#a40328');
+                htmlTag.style.setProperty('--GLOBAL__COLOR__ACCENT', '#a40328');
+            }
 
-                var button = iframeDoc.querySelector('button[data-testid="get-tickets"], .button--primary, .banner__cta');
-                if (button) {
-                    var loader = document.getElementById('gsc-ticket-loader');
-                    if (loader) loader.style.display = 'none';
-                    clearInterval(checkLoader);
-                }
+            var button = iframeDoc.querySelector('button[data-testid="get-tickets"], .button--primary, .banner__cta');
+            if (!button) return;
+
+            // Only swap out the loader once the widget is actually visible
+            if (!syncIframeHeight(iframe, iframeDoc)) return;
+
+            var loader = document.getElementById('gsc-ticket-loader');
+            if (loader) loader.style.display = 'none';
+            clearInterval(checkLoader);
+
+            // Follow later content changes (e.g. series date pickers)
+            if (window.ResizeObserver && iframeDoc.body) {
+                new ResizeObserver(function () {
+                    syncIframeHeight(iframe, iframeDoc);
+                }).observe(iframeDoc.body);
             }
         }, 100);
 
